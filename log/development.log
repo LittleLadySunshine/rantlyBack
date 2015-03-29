@@ -5107,3 +5107,23 @@ Processing by RantsController#index as HTML
   [1m[36mUser Load (74.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 15]]
   [1m[35mRant Load (52.1ms)[0m  SELECT "rants".* FROM "rants"
 Completed 200 OK in 225ms (Views: 96.8ms | ActiveRecord: 127.0ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:03:19 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (7.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RantsController#index as HTML
+  [1m[35mRant Load (3.3ms)[0m  SELECT "rants".* FROM "rants"
+Completed 200 OK in 140ms (Views: 99.7ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:03:24 -0600
+Processing by RantsController#index as HTML
+  [1m[36mRant Load (0.5ms)[0m  [1mSELECT "rants".* FROM "rants"[0m
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for ::1 at 2015-03-29 17:03:33 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"Denise@example.com", "password"=>"[FILTERED]", "user_id"=>nil}}
+  [1m[35mUser Load (7.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "Denise@example.com"]]
+Completed 200 OK in 165ms (Views: 3.6ms | ActiveRecord: 9.0ms)
