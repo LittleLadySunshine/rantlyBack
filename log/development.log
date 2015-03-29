@@ -5127,3 +5127,215 @@ Processing by SessionsController#create as HTML
   Parameters: {"session"=>{"email"=>"Denise@example.com", "password"=>"[FILTERED]", "user_id"=>nil}}
   [1m[35mUser Load (7.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "Denise@example.com"]]
 Completed 200 OK in 165ms (Views: 3.6ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:22:09 -0600
+Processing by RantsController#index as HTML
+  [1m[36mUser Load (43.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mRant Load (0.8ms)[0m  SELECT "rants".* FROM "rants"
+Completed 200 OK in 180ms (Views: 134.2ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/users" for ::1 at 2015-03-29 17:22:18 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (6.3ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "3"]]
+  [1m[36mRant Load (0.4ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "3"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "4"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "4"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "5"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "5"]]
+  [1m[35m (0.3ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "6"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "6"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "7"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "7"]]
+  [1m[35m (0.5ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "8"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "8"]]
+  [1m[35m (0.1ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "9"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "9"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "10"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "10"]]
+  [1m[35m (0.1ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "11"]]
+  [1m[36mRant Load (0.1ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "11"]]
+  [1m[35m (0.1ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "12"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "12"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "13"]]
+  [1m[36mRant Load (0.5ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "13"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "14"]]
+  [1m[36mRant Load (0.1ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "14"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "15"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "15"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "16"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "16"]]
+  [1m[35m (0.3ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "17"]]
+  [1m[36mRant Load (0.3ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "17"]]
+  [1m[35m (0.1ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "18"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "18"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "19"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "19"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "20"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "20"]]
+  [1m[35m (0.2ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "21"]]
+  [1m[36mRant Load (0.2ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "21"]]
+  [1m[35m (0.1ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "22"]]
+  [1m[36mRant Load (0.1ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "22"]]
+  [1m[35m (0.1ms)[0m  SELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "23"]]
+  [1m[36mRant Load (0.1ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "23"]]
+Completed 200 OK in 200ms (Views: 181.3ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:22:19 -0600
+Processing by RantsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mRant Load (0.3ms)[0m  [1mSELECT "rants".* FROM "rants"[0m
+Completed 200 OK in 107ms (Views: 105.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:22:21 -0600
+Processing by RantsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mRant Load (0.9ms)[0m  [1mSELECT "rants".* FROM "rants"[0m
+Completed 200 OK in 84ms (Views: 82.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:22:26 -0600
+Processing by RantsController#index as HTML
+  [1m[35mRant Load (0.4ms)[0m  SELECT "rants".* FROM "rants"
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rants?find=lorem" for ::1 at 2015-03-29 17:23:31 -0600
+Processing by RantsController#index as HTML
+  Parameters: {"find"=>"lorem"}
+  [1m[36mRant Load (29.6ms)[0m  [1mSELECT "rants".* FROM "rants" WHERE (lower(title) like '%lorem%' OR lower(body) like '%lorem%')[0m
+Completed 200 OK in 101ms (Views: 70.2ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/rants?find=lorem" for ::1 at 2015-03-29 17:23:31 -0600
+Processing by RantsController#index as HTML
+  Parameters: {"find"=>"lorem"}
+  [1m[35mRant Load (0.9ms)[0m  SELECT "rants".* FROM "rants" WHERE (lower(title) like '%lorem%' OR lower(body) like '%lorem%')
+Completed 200 OK in 99ms (Views: 96.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/sessions" for ::1 at 2015-03-29 17:25:44 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"Denise@example.com", "password"=>"[FILTERED]", "user_id"=>nil}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "Denise@example.com"]]
+Completed 200 OK in 96ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-03-29 17:25:46 -0600
+Processing by UsersController#index as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:25:51 -0600
+Processing by RantsController#index as HTML
+  [1m[35mRant Load (0.4ms)[0m  SELECT "rants".* FROM "rants"
+Completed 200 OK in 85ms (Views: 84.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2015-03-29 17:25:52 -0600
+Processing by UsersController#index as HTML
+Filter chain halted as :require_login rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:25:55 -0600
+Processing by RantsController#index as HTML
+  [1m[36mRant Load (0.4ms)[0m  [1mSELECT "rants".* FROM "rants"[0m
+Completed 200 OK in 96ms (Views: 94.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:25:58 -0600
+Processing by RantsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mRant Load (0.4ms)[0m  [1mSELECT "rants".* FROM "rants"[0m
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2015-03-29 17:26:00 -0600
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (7.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "3"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "3"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "4"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "4"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "5"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "5"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "6"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "6"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "7"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "7"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "8"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "8"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "9"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "9"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "10"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "10"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "11"]]
+  [1m[35mRant Load (0.1ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "11"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "12"]]
+  [1m[35mRant Load (0.1ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "12"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "13"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "13"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "14"]]
+  [1m[35mRant Load (0.1ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "14"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "15"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "15"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "16"]]
+  [1m[35mRant Load (0.3ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "16"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "17"]]
+  [1m[35mRant Load (0.8ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "17"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "18"]]
+  [1m[35mRant Load (0.3ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "18"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "19"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "19"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "20"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "20"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "21"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "21"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "22"]]
+  [1m[35mRant Load (0.2ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "22"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "rants".id FROM "rants" WHERE "rants"."user_id" = $1[0m  [["user_id", "23"]]
+  [1m[35mRant Load (0.1ms)[0m  SELECT "rants".* FROM "rants" WHERE "rants"."user_id" = $1  [["user_id", "23"]]
+Completed 200 OK in 161ms (Views: 142.2ms | ActiveRecord: 17.2ms)
+
+
+Started PUT "/users/12" for ::1 at 2015-03-29 17:26:30 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"first_name"=>"Bobby", "last_name"=>"Crist", "email"=>"retta.hermann@cummingswilderman.biz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 12]]
+Unpermitted parameters: password, password_confirmation
+  [1m[36m (9.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (25.2ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('retta.hermann@cummingswilderman.biz') AND "users"."id" != 12) LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 204 No Content in 78ms (ActiveRecord: 35.4ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:34:22 -0600
+Processing by RantsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mRant Load (0.3ms)[0m  [1mSELECT "rants".* FROM "rants"[0m
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:34:24 -0600
+Processing by RantsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mRant Load (0.4ms)[0m  [1mSELECT "rants".* FROM "rants"[0m
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rants" for ::1 at 2015-03-29 17:34:27 -0600
+Processing by RantsController#index as HTML
+  [1m[35mRant Load (0.8ms)[0m  SELECT "rants".* FROM "rants"
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.8ms)
