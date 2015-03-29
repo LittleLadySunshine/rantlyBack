@@ -21,6 +21,8 @@ gem 'bcrypt', '~>3.1.7'
 
 gem 'jwt', '~>1.4.1'
 
+gem 'jquery-rails', "~> 2.3.0"
+
 
 group :development, :test do
   gem 'byebug'
@@ -29,3 +31,5 @@ group :development, :test do
 
   gem 'spring', '~>1.3.3'
 end
+
+gem 'rails_12factor', group: :production
